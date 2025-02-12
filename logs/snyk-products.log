@@ -1,0 +1,55 @@
+Gradle Error (short):
+> Could not find method sonarqube() for arguments [build_b9vn5bo7eh8i1xw684z0da36s$_run_closure5@50c6c81a] on root project 'Products' of type org.gradle.api.Project.
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+===== DEBUG INFORMATION START =====
+
+------------------------------------------------------------
+Gradle 8.5
+------------------------------------------------------------
+
+Build time:   2023-11-29 14:08:57 UTC
+Revision:     28aca86a7180baa17117e0e5ba01d8ea9feca598
+
+Kotlin:       1.9.20
+Groovy:       3.0.17
+Ant:          Apache Ant(TM) version 1.10.13 compiled on January 4 2023
+JVM:          17.0.13 (Azul Systems, Inc. 17.0.13+11-LTS)
+OS:           Linux 6.8.0-1017-azure amd64
+
+
+
+>>> command: /home/runner/work/FoodStock_backend/FoodStock_backend/products/gradlew snykResolvedDepsJson -q --build-file /home/runner/work/FoodStock_backend/FoodStock_backend/products/build.gradle -Dorg.gradle.parallel= -Dorg.gradle.console=plain -PonlySubProject=. -I /tmp/tmp-3156-yxnwJzT02tNc--init.gradle --no-configuration-cache
+>>> exit code: 1
+>>> stdout:
+
+>>> stderr:
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file '/home/runner/work/FoodStock_backend/FoodStock_backend/products/build.gradle' line: 35
+
+* What went wrong:
+A problem occurred evaluating root project 'Products'.
+> Could not find method sonarqube() for arguments [build_b9vn5bo7eh8i1xw684z0da36s$_run_closure5@50c6c81a] on root project 'Products' of type org.gradle.api.Project.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 592ms
+
+
+===== DEBUG INFORMATION END =====
+
+Error running Gradle dependency analysis.
+
+Please ensure you are calling the `snyk` command with correct arguments.
+If the problem persists, contact support@snyk.io, providing the full error
+message from above, starting with ===== DEBUG INFORMATION START =====.

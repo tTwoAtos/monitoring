@@ -1,0 +1,5 @@
+snyk_dependencies_total
+snyk_issues_total
+snyk_issues_total / snyk_dependencies_total
+snyk_issues_by_severity_total{severity="critical"}
+sum by (severity) (snyk_issues_by_severity_total)

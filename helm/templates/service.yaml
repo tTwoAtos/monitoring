@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+spec:
+  type: {{ .Values.prometheus.service.type }}
+  ports:
+    -  port: {{ .Values.prometheus.service.port }}
+       targetPort: 9090
+  selector:
+    app: prometheus
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+spec:
+  type: {{ .Values.grafana.service.type }}
+  ports:
+    -  port: {{ .Values.grafana.service.port }}
+       targetPort: 3000
+  selector:
+    app: grafana
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: snyk-exporter
+spec:
+  type: {{ .Values.snykExporter.service.type }}
+  ports:
+    -  port: {{ .Values.snykExporter.service.port }}
+       targetPort: 9469
+  selector:
+    app: snyk-exporter

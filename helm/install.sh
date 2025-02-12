@@ -1,0 +1,1 @@
+helm install foodstock-monitoring . --namespace foodstock-monitoring
